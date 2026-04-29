@@ -1,0 +1,12 @@
+d = cls$Tdir/d
+desktop = cd /d %USERPROFILE%\Desktop\$Tcls
+MACROS = cd /d C:\bat$Tnvim macros.doskey
+- = cd ../$*$Tcls$Techo "executed cd ../$*"
+-- = cd ../../$*$Techo  "executed cd ../../$*"
+v = vivaldi $*
+cd~ = cd /d %USERPROFILE%$Tcd ../..$Tcls
+cd_APPDATA = cd /d %localappdata%
+nv = neovide $*
+tasks = tasklist /fi "memusage gt $1"
+kill = taskkill /pid $1
+forcekill = taskkill /f /pid $1
