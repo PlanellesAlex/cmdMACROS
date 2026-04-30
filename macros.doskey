@@ -3,7 +3,8 @@ desktop = cd /d %USERPROFILE%\Desktop\$Tcls
 MACROS = cd /d C:\bat$Tnvim macros.doskey
 - = cd ../$*$Tcls$Techo "executed cd ../$*"
 -- = cd ../../$*$Techo  "executed cd ../../$*"
-v = vivaldi $*
+v = vivaldi "https://duckduckgo.com/?q=$*"
+vg = vivaldi "https://www.google.com/search?q=$*"
 cd~ = cd /d %USERPROFILE%$Tcd ../..$Tcls
 cd_APPDATA = cd /d %localappdata%
 nv = neovide $*
