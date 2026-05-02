@@ -11,3 +11,5 @@ nv = neovide $*
 tasks = tasklist /fi "memusage gt $1"
 kill = taskkill /pid $1
 forcekill = taskkill /f /pid $1
+winget_fetch = winget search $1 | fzf | clip
+truepath = for /f "delims=" %i in ('fd $1 ^| fzf') do @<nul set /p=""%~dpi"" | clip
