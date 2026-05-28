@@ -1,6 +1,7 @@
+MACROS = type C:\bat\macros.doskey
 d = cls$Tdir/d
 desktop = cd /d %USERPROFILE%\Desktop\$Tcls
-MACROS = cd /d C:\bat$Tnvim macros.doskey
+edit_MACROS = cd /d C:\bat$Tnvim macros.doskey
 - = cd ../$*$Tcls$Techo "executed cd ../$*"
 -- = cd ../../$*$Techo  "executed cd ../../$*"
 v = vivaldi "https://duckduckgo.com/?q=$*"
@@ -13,4 +14,6 @@ kill = taskkill /pid $1
 forcekill = taskkill /f /pid $1
 winget_fetch = winget search $1 | fzf | clip
 truepath = for /f "delims=" %i in ('fd $1 ^| fzf') do @<nul set /p=""%~dpi"" | clip
-go = for /f "delims=" %i in ('fd $1 ^| fzf') do cd /d "%~dpi"
+go_current_scope = for /f "delims=" %i in ('fd $1 ^| fzf') do cd /d "%~dpi"
+go_hide_hidden = for /f "delims=" %i in ('fd --hidden --no-ignore -E "Windows" -E "Program Files*" -E "$Recycle.Bin" -E "System Volume Information" -E "node_modules" -E ".git" $1 C:\ D:\ ^| fzf') do cd /d "%~dpi"
+go = for /f "delims=" %i in ('fd $1 C:\ D:\ ^| fzf') do cd /d "%~dpi"
