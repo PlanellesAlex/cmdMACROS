@@ -1,3 +1,7 @@
+Aquesta branca simplement es per provar que git em funcioni al thinkpad. Igual poso aliases per .zshrc 
+pero de moment no és el que tinc pensat
+
+
 Has d'anar al editor de registros de Windows
 Ho pots fer posant `regedit` a la terminal
 
